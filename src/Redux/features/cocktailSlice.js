@@ -5,7 +5,9 @@ export const fetchCocktails = createAsyncThunk("cocktails/fetchCocktails",
     async () => {
         try {
             const res = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=");
-            return res
+          
+            return res.data
+
 
         } catch (error) {
             console.log(error)
